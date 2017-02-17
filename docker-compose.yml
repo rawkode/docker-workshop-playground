@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  application:
+    build: .
+    volumes:
+      - .:/var/www/html
+      - ./secrets:/run/secrets
+    ports:
+      - 80:80
+
